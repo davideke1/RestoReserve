@@ -4,16 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
-djangorestframework = "*"
-decouple = "*"
+django = "==4.2.2"
+djangorestframework = "==3.14.0"
+decouple = "==0.0.7"
 python-decouple = "*"
-pillow = "*"
-fontawesomefree = "*"
-fontawesome = "*"
-django-taggit = "*"
+pillow = "==9.5.0"
+fontawesomefree = "==6.4.0"
+fontawesome = "==5.10.1.post1"
+django-taggit = "==4.0.0"
 psycopg2 = "*"
 psycopg2-binary = "*"
+asgiref = "==3.7.2"
 
 [dev-packages]
 
