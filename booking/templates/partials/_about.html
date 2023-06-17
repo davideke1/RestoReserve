@@ -1,0 +1,29 @@
+{% load static %}
+<section class="about_section layout_padding">
+    <div class="container  ">
+
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{% static 'images/about.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                We Are Resto Reserve
+              </h2>
+            </div>
+            <p>
+              RestoReserve is your gateway to exceptional dining experiences. We take pride in offering a handpicked selection of the finest restaurants, ensuring that you have access to the best meals in town. With our user-friendly platform, finding the perfect restaurant is a breeze.
+At RestoReserve, we understand that...
+            </p>
+            <a href="{% url 'about' %}">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,78 @@
+{% load static %}
+<section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Resto Reserve
+                    </h1>
+                    <p>
+                      At RestoReserve, we offer the finest selection of restaurants for you to choose from, ensuring you have the best dining experience. Indulge in delicious meals that will satisfy your taste buds.
+                    </p>
+                    <div class="btn-box">
+                      <a href="{% url 'booking' pk=1 %}" class="btn1">
+                        Make Reservation
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Resto Reserve
+                    </h1>
+                    <p>
+                      At RestoReserve, we offer the finest selection of restaurants for you to choose from, ensuring you have the best dining experience. Indulge in delicious meals that will satisfy your taste buds.
+                    </p>
+                    <div class="btn-box">
+                      <a href="{% url 'booking' pk=1 %}" class="btn1">
+                        Make Reservation
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      View All Restuarant
+                    </h1>
+                    <p>
+                      Discover a world of culinary delights with our "View All Restaurants" feature. Explore a diverse range of eateries, from cozy cafes to upscale dining establishments, all in one place. Find your perfect dining spot and embark on a gastronomic journey like no other.
+                    </p>
+                    <div class="btn-box">
+                      <a href="{% url 'restaurant_list' %}" class="btn1">
+                        View Restaurants
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </div>
+
+    </section>

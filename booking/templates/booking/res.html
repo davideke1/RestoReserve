@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Available Restaurants</title>
+  <style>
+    .restaurant-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .restaurant-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .restaurant-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .restaurant-details {
+      flex: 1;
+    }
+
+    .restaurant-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .restaurant-address {
+      font-size: 16px;
+      color: #888;
+    }
+
+    .restaurant-description {
+      margin-top: 10px;
+    }
+
+    .restaurant-contact {
+      margin-top: 10px;
+    }
+
+    .restaurant-contact a {
+      text-decoration: none;
+      color: #0366d6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Available Restaurants</h1>
+  <ul class="restaurant-list">
+    {% for restaurant in restaurants %}
+    <li class="restaurant-item">
+      <img src="{{ restaurant.image.url }}" alt="{{ restaurant.name }}">
+      <div class="restaurant-details">
+        <div class="restaurant-name">{{ restaurant.name }}</div>
+        <div class="restaurant-address">{{ restaurant.address }}</div>
+        <div class="restaurant-description">{{ restaurant.description|linebreaks }}</div>
+        <div class="restaurant-contact">
+          Phone: {{ restaurant.phone_number }}<br>
+          Email: <a href="mailto:{{ restaurant.email }}">{{ restaurant.email }}</a><br>
+          Website: <a href="{{ restaurant.website }}">{{ restaurant.website }}</a>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

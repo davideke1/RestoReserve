@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('{% static "images/bg.jpg" %}');
+        background-color: rgba(0, 0, 0, 0.5);
+      background-size: cover;
+      background-position: center;
+
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .homepage-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .homepage-link:hover {
+      text-decoration: underline;
+    }
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.homepage-btn {
+  background-color: orange;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.homepage-btn:hover {
+  background-color: darkorange;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Booking Confirmation</h1>
+
+    <p>Thank you for your reservation! We look forward to serving you.</p>
+
+    <h2>Reservation Details</h2>
+    <ul>
+      <li><strong>Restaurant:</strong> {{ reservation.restaurant.name }}</li>
+      <li><strong>Date:</strong> {{ reservation.date }}</li>
+      <li><strong>Time:</strong> {{ reservation.time }}</li>
+      <li><strong>Party Size:</strong> {{ reservation.party_size }}</li>
+    </ul>
+        <p>Check your email for booking confirmation </p>
+      <p>If you have any further questions or need to make changes to your reservation, please contact us at <b>{{ reservation.restaurant.email }} or {{ reservation.restaurant.phone_number }}</b>.</p>
+
+      <div class="homepage">
+  <button class="homepage-btn"><a class="homepage-link" style="text-decoration: none" href="{% url 'homepage' %}">Go to Homepage</a></button>
+</div>
+
+  </div>
+</body>
+</html>
