@@ -147,7 +147,7 @@ STATIC_URL = '/booking/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'booking', 'static')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'booking', 'static'),
+'/booking/static/',
 ]
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
