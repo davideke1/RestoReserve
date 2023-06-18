@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'restoreserve',
         'USER': 'postgres',
         'PASSWORD': 'david',
-        'HOST': '127.0.0.1',
+        'HOST': 'resto-davideke1.vercel.app',
         'PORT': '5433',
     }
 }
