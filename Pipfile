@@ -20,6 +20,8 @@ sqlparse = "==0.4.4"
 typing-extensions = "==4.6.3"
 tzdata = "==2023.3"
 python-dotenv = "*"
+cloudinary = "*"
+django-cloudinary-storage = "*"
 
 [dev-packages]
 
